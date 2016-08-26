@@ -1,6 +1,7 @@
 // http://www.daddario.com/upload/tension_chart_13934.pdf
 // This is parsing a PDF in Firefox's viewer, so any of this script could
 // very easily break.
+// TODO role this into an automated parser, maybe with pdf.js or something
 
 var filterBySku = sku => Array.filter(document.querySelectorAll('div'), div => sku.test(div.innerText));
 // XL - Nickelplated steel round wound

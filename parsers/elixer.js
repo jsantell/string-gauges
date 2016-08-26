@@ -16,40 +16,43 @@ var STRING_TO_PITCH = {
 // tension calculations
 var SCALE_LENGTH = 25.5;
 
-var results = Object.keys(STRING_TO_PITCH).reduce(function (data, stringName) {
-  parse(data, stringName, STRING_TO_PITCH[stringName]);
-  return data;
-}, {});
+module.exports = function parse ($) {
+  var results = Object.keys(STRING_TO_PITCH).reduce(function (data, stringName) {
+    getData($, data, stringName, STRING_TO_PITCH[stringName]);
+    return data;
+  }, {});
 
-// Each gauge has an array of potential values, due to the website's imprecise
-// listing of tension (only whole numbers). So take all the potential weights
-// that we've observed, and average them (TODO better way?)
-results = Object.keys(results).sort(function (a, b) {
-  return Number(a) - Number(b);
-}).reduce(function (output, gauge) {
-  var weights = results[gauge];
-  output[gauge] = weights.reduce(function (sum, val) { return sum + val; }, 0) / weights.length;
-  return output;
-}, {});
+  // Each gauge has an array of potential values, due to the website's imprecise
+  // listing of tension (only whole numbers). So take all the potential weights
+  // that we've observed, and average them (TODO better way?)
+  results = Object.keys(results).sort(function (a, b) {
+    return Number(a) - Number(b);
+  }).reduce(function (output, gauge) {
+    var weights = results[gauge];
+    output[gauge] = weights.reduce(function (sum, val) { return sum + val; }, 0) / weights.length;
+    return output;
+  }, {});
 
-console.log(results);
+  return results;
+}
 
 // For consistency, we have to convert the tension value back to the string weight
 // for the consistency with the rest of the data.
 // They list strings by set, so there are duplicates, but should be consistent
 // throughout
-function parse (aggregator, stringName, frequency) {
+function getData ($, aggregator, stringName, frequency) {
   var selector = 'td[data-th="' + stringName + '"]';
-  var fields = document.querySelectorAll(selector);
+  var fields = $(selector);
 
-  Array.prototype.forEach.call(fields, function (field) {
-    var match = (field.innerText || '').match(/^(\.\d*) \/ (\d*)$/);
+  fields.each(function () {
+    var field = $(this);
+    var match = (field.text() || '').match(/^ *(\.\d*) \/ (\d*)$/);
     if (!match) {
       return;
     }
     // The extra set of strings on the 12 string set messes this up as the pitches are different
     // octaves. Just ignore them, the gauges are covered by others.
-    if (field.parentNode.querySelectorAll('.strings-continued-hidden').length) {
+    if (field.parent().find('.strings-continued-hidden').length) {
       return;
     }
 

@@ -45,9 +45,15 @@ The gauge data maps string gauges via diameter in millimeters to the unit weight
 * D'Addario Plain Steel Lock Twist (`daddario-pl`)
 * D'Addario XL - Nickelplated Steel Round Wound (`daddario-nw`)
 
-## Scripts
+## Data Collection
 
-Scripts used to scrape sites are found in `./scripts`.
+Data is scraped from string manufacturer websites via scripts. To scrape the latest (most likely won't change), run:
+
+`npm run scrape`
+
+Based off of the defintions in `types.json`, a parser from `./parsers` is used, after being passed in the `$` cheerio function, as well as any additional arguments spread via `parserArgs` in the definition.
+
+For sites unscrapable, like D'Addario's PDFs, they live in `./scripts`, to be pasted into developer tools (recommend Firefox to call `copy(results)` afterwards for adding to clipboard.
 
 ## Testing
 

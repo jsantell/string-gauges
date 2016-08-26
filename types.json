@@ -12,36 +12,52 @@
   "kalium-plain": {
     "brand": "Kalium",
     "type": "plain",
-    "name": "Plain"
+    "name": "Plain",
+    "parser": "kalium",
+    "parserUrl": "http://store.kaliumstrings.com/TensionCalculator/tensionChart.php",
+    "parserArgs": ["plain"]
   },
   "kalium-wound": {
     "brand": "Kalium",
     "type": "wound",
-    "name": "Wound"
+    "name": "Wound",
+    "parser": "kalium",
+    "parserUrl": "http://store.kaliumstrings.com/TensionCalculator/tensionChart.php",
+    "parserArgs": ["wound"]
   },
   "elixer-nanoweb": {
     "brand": "Elixer",
     "type": "mixed",
-    "name": "Electric NANOWEB"
+    "name": "Electric NANOWEB",
+    "parser": "elixer",
+    "parserUrl": "http://www.elixirstrings.com/guitar-strings/electric-nanoweb-guitar-strings.html"
   },
   "elixer-polyweb": {
     "brand": "Elixer",
     "type": "mixed",
-    "name": "Electric POLYWEB"
+    "name": "Electric POLYWEB",
+    "parser": "elixer",
+    "parserUrl": "http://www.elixirstrings.com/guitar-strings/electric-polyweb-guitar-strings.html"
   },
   "elixer-acoustic-phosphor-nanoweb": {
     "brand": "Elixer",
     "type": "mixed",
-    "name": "Acoustic Phosphor Bronze NANOWEB"
+    "name": "Acoustic Phosphor Bronze NANOWEB",
+    "parser": "elixer",
+    "parserUrl": "http://www.elixirstrings.com/guitar-strings/phosphor-bronze-guitar-strings.html"
   },
   "elixer-acoustic-80-nanoweb": {
     "brand": "Elixer",
     "type": "mixed",
-    "name": "Acoustic 80/20 Bronze NANOWEB"
+    "name": "Acoustic 80/20 Bronze NANOWEB",
+    "parser": "elixer",
+    "parserUrl": "http://www.elixirstrings.com/guitar-strings/80-20-bronze-guitar-strings.html"
   },
   "elixer-acoustic-80-polyweb": {
     "brand": "Elixer",
     "type": "mixed",
-    "name": "Acoustic 80/20 Bronze POLYWEB"
+    "name": "Acoustic 80/20 Bronze POLYWEB",
+    "parser": "elixer",
+    "parserUrl": "http://www.elixirstrings.com/guitar-strings/80-20-bronze-polyweb-guitar-strings.html"
   }
 }
