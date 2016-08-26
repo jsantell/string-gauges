@@ -30,4 +30,20 @@ describe('test string-gauges', function () {
       });
     });
   });
+
+  it('all gauges and weights ascending order', function () {
+    Object.keys(types).forEach(function (type) {
+      var data = types[type].data;
+
+      var lastWeight = -Infinity;
+      var lastGauge = -Infinity;
+      Object.keys(data).forEach(function (gauge) {
+        var weight = data[gauge];
+        assert(Number(gauge) > lastGauge);
+        assert(weight > lastWeight);
+        lastWeight = weight;
+        lastGauge = Number(gauge);
+      });
+    });
+  });
 });
