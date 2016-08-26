@@ -44,6 +44,11 @@ The gauge data maps string gauges via diameter in millimeters to the unit weight
 * Kalium Wound (`kalium-wound`)
 * D'Addario Plain Steel Lock Twist (`daddario-pl`)
 * D'Addario XL - Nickelplated Steel Round Wound (`daddario-nw`)
+* Elixer Electric NANOWEB (`elixer-nanoweb`)
+* Elixer Electric POLYWEB (`elixer-polyweb`)
+* Elixer Acoustic Phosphor Bronze NANOWEB (`elixer-acoustic-phosphor-nanoweb`)
+* Elixer Acoustic 80/20 Bronze NANOWEB (`elixer-acoustic-80-nanoweb`)
+* Elixer Acoustic 80/20 Bronze POLYWEB (`elixer-acoustic-80-polyweb`)
 
 ## Data Collection
 
