@@ -19,6 +19,16 @@ var types = {
     type: 'wound',
     name: 'Wound',
   },
+  'elixer-nanoweb': {
+    brand: 'Elixer',
+    type: '',
+    name: 'Electric NANOWEB',
+  },
+  'elixer-polyweb': {
+    brand: 'Elixer',
+    type: '',
+    name: 'Electric POLYWEB',
+  },
 };
 
 Object.keys(types).forEach(function (type) {

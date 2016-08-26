@@ -5,6 +5,7 @@ describe('test string-gauges', function () {
   it('exports keys of string types', function () {
     assert(types['daddario-nw']);
     assert(types['kalium-wound']);
+    assert(types['elixer-polyweb']);
   });
 
   it('each string type has a brand, name, and type', function () {
