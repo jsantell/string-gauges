@@ -29,6 +29,21 @@ var types = {
     type: '',
     name: 'Electric POLYWEB',
   },
+  'elixer-acoustic-phosphor-nanoweb': {
+    brand: 'Elixer',
+    type: '',
+    name: 'Acoustic Phosphor Bronze NANOWEB',
+  },
+  'elixer-acoustic-80-nanoweb': {
+    brand: 'Elixer',
+    type: '',
+    name: 'Acoustic 80/20 Bronze NANOWEB',
+  },
+  'elixer-acoustic-80-polyweb': {
+    brand: 'Elixer',
+    type: '',
+    name: 'Acoustic 80/20 Bronze POLYWEB',
+  },
 };
 
 Object.keys(types).forEach(function (type) {
