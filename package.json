@@ -1,11 +1,12 @@
 {
   "name": "string-gauges",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Data mapping guitar string brands to unit weight",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "scrape": "node parse.js"
+    "scrape": "node parse.js",
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
